@@ -1,0 +1,2 @@
+GameID: WRzngFnLmIRcMRdmUcGHfWGhegp2
+Allowed platforms: Steam, Epic

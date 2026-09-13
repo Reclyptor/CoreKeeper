@@ -1,0 +1,14 @@
+"AppState"
+{
+	"appid"		"1963720"
+	"name"		"Core Keeper Dedicated Server"
+	"buildid"		"23543502"
+	"InstalledDepots"
+	{
+		"1963722"
+		{
+			"manifest"		"9082869442509405085"
+			"size"		"1"
+		}
+	}
+}
