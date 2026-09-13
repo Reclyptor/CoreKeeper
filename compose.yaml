@@ -1,0 +1,26 @@
+# Quick start. Copy, `docker compose up -d`, read the Game ID from the logs or
+# Discord, and join from the game with it. No port forwarding needed.
+# Full configuration: README.md
+services:
+  corekeeper:
+    image: ghcr.io/reclyptor/corekeeper:latest
+    container_name: corekeeper
+    restart: unless-stopped
+    environment:
+      TZ: America/Chicago
+      SERVER_NAME: "Core Keeper"        # the name notifications use
+      WORLD_NAME: "Our Cave"
+      MAX_PLAYERS: "10"
+      # GAME_ID: "FifteenToTwentyEightAlnum"   # omit: one is generated and kept in /data/gameid
+      DISCORD_WEBHOOK_URL: ""
+      BACKUP_CRON: "0 4 * * *"
+      BACKUP_RETAIN_DAYS: "14"
+      UPDATE_CRON: "0 * * * *"
+      UPDATE_WARN_MINUTES: "15"
+    volumes:
+      - ./data:/data
+      - ./backups:/backups
+    # The image runs as uid/gid 1000. Create the directories with that owner:
+    #   mkdir -p data backups && sudo chown -R 1000:1000 data backups
+    # Direct-connect mode instead of Steam relay:
+    #   PORT: "27015"  + ports: ["27015:27015/udp"]  + GAME_PASSWORD  (PORT set = direct connect)

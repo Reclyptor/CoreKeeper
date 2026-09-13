@@ -1,0 +1,8 @@
+Mono path[0] = '/data/server/CoreKeeperServer_Data/Managed'
+[userid:76561198012345678] player Alice connected islocalplayer=False
+Started session with info: GameID=abc, Public=False
+[userid:76561198087654321] player Bob Builder connected islocalplayer=False
+Some unrelated line with userid:76561198012345678 in it
+Disconnected from userid: 76561198012345678 with reason ClientDisconnect
+Disconnected from userid:76561198087654321 with reason Timeout
+Disconnected from userid: 99 with reason Unknown
