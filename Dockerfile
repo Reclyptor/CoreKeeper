@@ -3,7 +3,7 @@
 # ghcr.io/reclyptor/corekeeper — Core Keeper dedicated server on the GameOps toolkit.
 # Adapter contract: https://github.com/Reclyptor/GameOps/blob/master/docs/CONTRACT.md
 
-ARG GAMEOPS_VERSION=1.0.0
+ARG GAMEOPS_VERSION=1.1.1
 FROM ghcr.io/reclyptor/gameops:${GAMEOPS_VERSION} AS gameops
 
 FROM debian:trixie-slim
